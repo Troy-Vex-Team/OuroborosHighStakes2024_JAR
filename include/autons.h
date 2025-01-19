@@ -1,9 +1,15 @@
 #pragma once
 #include "JAR-Template/drive.h"
+#include "Constants.h"
 
 class Drive;
 
 extern Drive chassis;
+
+void first_auton() {
+    chassis.set_coordinate(0, 0, 0);
+    chassis.drive_to_point(0, 12, 0);
+}
 
 void default_constants();
 

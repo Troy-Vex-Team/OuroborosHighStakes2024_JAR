@@ -1,4 +1,5 @@
 #include "vex.h"
+#include "Constants.h"
 
 using namespace vex;
 competition Competition;
@@ -50,15 +51,15 @@ motor_group(LeftFront,LeftMiddle,LeftBack),
 motor_group(RightFront,RightMiddle,RightBack),
 
 //Specify the PORT NUMBER of your inertial sensor, in PORT format (i.e. "PORT1", not simply "1"):
-PORT1,
+PORT1, 
 
 //Input your wheel diameter. (4" omnis are actually closer to 4.125"):
-4.125,
+OMNI_WHEEL_DIAMETER+0.125,
 
 //External ratio, must be in decimal, in the format of input teeth/output teeth.
 //If your motor has an 84-tooth gear and your wheel has a 60-tooth gear, this value will be 1.4.
 //If the motor drives the wheel directly, this value is 1:
-6,
+0.75,
 
 //Gyro scale, this is what your gyro reads when you spin the robot 360 degrees.
 //For most cases 360 will do fine here, but this scale factor can be very helpful when precision is necessary.

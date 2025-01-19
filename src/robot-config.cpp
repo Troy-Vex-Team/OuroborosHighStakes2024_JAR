@@ -1,4 +1,5 @@
 #include "vex.h"
+#include "Constants.h"
 
 using namespace vex;
 using signature = vision::signature;
@@ -11,13 +12,15 @@ brain  Brain;
 //motor LeftFront = motor(PORT1, ratio6_1, false);
 
 //Add your devices below, and don't forget to do the same in robot-config.h:
-motor LeftFront = (PORT1, ratio6_1, true); 
-motor LeftMiddle = (PORT2, ratio6_1, true);
-motor LeftBack = (PORT3, ratio6_1, true); 
+motor LeftFront = (LF, ratio6_1, true); 
+motor LeftMiddle = (LM, ratio6_1, true);
+motor LeftBack = (LB, ratio6_1, true); 
 
-motor RightFront = (PORT8, ratio6_1, false);
-motor RightMiddle = (PORT9, ratio6_1, false);
-motor RightBack = (PORT10, ratio6_1, false);
+motor RightFront = (RF, ratio6_1, false);
+motor RightMiddle = (RM, ratio6_1, false);
+motor RightBack = (RB, ratio6_1, false);
+
+motor imu = (INERTIAL_SENSOR, ratio)
 
 void vexcodeInit( void ) {
   // nothing to initialize
