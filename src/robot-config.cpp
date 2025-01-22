@@ -12,15 +12,13 @@ brain  Brain;
 //motor LeftFront = motor(PORT1, ratio6_1, false);
 
 //Add your devices below, and don't forget to do the same in robot-config.h:
-motor LeftFront = (LF, ratio6_1, true); 
-motor LeftMiddle = (LM, ratio6_1, true);
-motor LeftBack = (LB, ratio6_1, true); 
+motor LeftFront = (1, ratio6_1, true); 
+motor LeftMiddle = (2, ratio6_1, true);
+motor LeftBack = (3, ratio6_1, true); 
 
-motor RightFront = (RF, ratio6_1, false);
-motor RightMiddle = (RM, ratio6_1, false);
-motor RightBack = (RB, ratio6_1, false);
-
-motor imu = (INERTIAL_SENSOR, ratio)
+motor RightFront = (8, ratio6_1, false);
+motor RightMiddle = (9, ratio6_1, false);
+motor RightBack = (10, ratio6_1, false);
 
 void vexcodeInit( void ) {
   // nothing to initialize
