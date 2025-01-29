@@ -14,5 +14,10 @@ extern motor RightFront;
 extern motor RightMiddle;
 extern motor RightBack;
 
+extern motor Intake;
+extern motor Elevator;
+
+extern pneumatics
+
 
 void  vexcodeInit( void );

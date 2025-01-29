@@ -27,6 +27,10 @@ motor RightBack = (10, ratio6_1, false);
 motor Intake = (6, ratio6_1, false);
 motor Elevator = (7, ratio2_1, false);
 
+//Pneumatics
+pros::adi::Pneumatics mogomech('a', false);
+pros::adi::Pneumatics doinker('b',false);
+
 void vexcodeInit( void ) {
   // nothing to initialize
 }

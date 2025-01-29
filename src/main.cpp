@@ -229,6 +229,36 @@ void usercontrol(void) {
     //or chassis.control_holonomic(); for holo drive.
     chassis.control_arcade();
 
+    bool last_L2_state = false;
+    bool last_a_state = false;
+    
+    if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
+        intake.move_velocity(300);
+        elevator.move(-110);
+    }
+    if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)){
+        intake.move_velocity(-300);
+        elevator.move(110);
+    }
+    if (!controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1) && !controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)){
+        intake.move_velocity(0);
+        elevator.move_velocity(0);
+    }
+
+    bool current_L2_state = controller.get_digital(pros::E_CONTROLLER_DIGITAL_L2);
+    if (current_L2_state && !last_L2_state) {
+        mogomech.toggle(); 
+    }
+    bool current_a_state = controller.get_digital(pros::E_CONTROLLER_DIGITAL_A);
+    if (current_a_state && !last_a_state){
+        doinker.toggle();
+    }
+
+
+    last_L2_state = current_L2_state; 
+    last_a_state = current_a_state;
+
+
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
   }
