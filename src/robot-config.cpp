@@ -24,8 +24,8 @@ motor RightMiddle = (9, ratio6_1, false);
 motor RightBack = (10, ratio6_1, false);
 
 // Other Motors:
-motor Intake = (6, ratio6_1, false);
-motor Elevator = (7, ratio2_1, false);
+motor intake = (6, ratio6_1, false);
+motor elevator = (7, ratio2_1, false);
 
 //Pneumatics
 pros::adi::Pneumatics mogomech('a', false);
